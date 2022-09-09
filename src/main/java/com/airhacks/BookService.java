@@ -12,5 +12,5 @@ public interface BookService {
 
     Optional<Book> removeBook(final int id);
 
-    Optional<Book> updateBook(final Book book);
+    Optional<Book> updateBook(final int id, final Book book);
 }

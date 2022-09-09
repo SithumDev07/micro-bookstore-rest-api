@@ -1,7 +1,5 @@
 package com.airhacks;
 
-import java.util.Date;
-
 public class Book {
     private int id;
     private String name;
@@ -10,6 +8,10 @@ public class Book {
     private String published;
 
     public Book() {}
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;

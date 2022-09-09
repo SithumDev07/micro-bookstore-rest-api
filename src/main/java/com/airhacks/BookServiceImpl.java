@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
 
     private static List<Book> books = new ArrayList<>();
 
@@ -40,9 +40,9 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public Optional<Book> updateBook(Book book) {
+    public Optional<Book> updateBook(int id, Book book) {
         for(Book b: books) {
-            if(book.getId() == book.getId()) {
+            if(book.getId() == id) {
                 b.setName(book.getName());
                 b.setISBN(book.getISBN());
                 b.setAuthor(book.getAuthor());
