@@ -47,8 +47,7 @@ public class BookController {
     @DELETE
     @Path("{id}")
     public Response removeBook(@PathParam("id") Integer id) {
-        if(bookService.removeBook(id).isPresent()) {
-            bookService.removeBook(id);
+        if(bookService.removeBook(id)) {
             return Response
                     .status(Response.Status.ACCEPTED)
                     .build();

@@ -10,7 +10,7 @@ public interface BookService {
 
     Optional<Book> getBookById(final int id);
 
-    Optional<Book> removeBook(final int id);
+    Boolean removeBook(final int id);
 
     Optional<Book> updateBook(final int id, final Book book);
 }

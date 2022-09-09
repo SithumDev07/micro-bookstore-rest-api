@@ -30,13 +30,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Optional<Book> removeBook(int id) {
+    public Boolean removeBook(int id) {
         for(Book b: books) {
             if(b.getId() == id) {
-                return Optional.of(books.remove(id));
+                if(books.remove(b)) {
+                    return true;
+                }
             }
         }
-        return Optional.empty();
+        return false;
     }
 
     @Override

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e9db44d-ee55-4723-bb86-bb1712eb695a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/airhacks/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/airhacks/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/airhacks/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/airhacks/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/airhacks/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/airhacks/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/airhacks/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/airhacks/BookServiceImpl.java" afterDir="false" />
@@ -90,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662654296291</updated>
       <workItem from="1662654298029" duration="12801000" />
-      <workItem from="1662692028132" duration="6685000" />
+      <workItem from="1662692028132" duration="8835000" />
     </task>
     <servers />
   </component>
