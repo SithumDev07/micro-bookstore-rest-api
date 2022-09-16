@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  server:
+    image: zeigren/payara-server-docker
+    volumes:
+      - ./target/micro.war:/opt/payara41/deployments/micro.war
+    ports:
+      - '9000:8080'
+      - '4848:4848'
