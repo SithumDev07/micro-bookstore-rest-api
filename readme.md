@@ -33,3 +33,7 @@ Step 2:
 Application is running on port: 8585
 
 Payara admin panel is running on port:4848
+
+if another service is running on port 4848, kill that service by,
+
+    sudo kill -9 $(sudo lsof -t -i:4848)

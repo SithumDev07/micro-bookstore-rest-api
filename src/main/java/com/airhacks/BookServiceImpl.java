@@ -49,9 +49,24 @@ public class BookServiceImpl implements BookService {
                 b.setISBN(book.getISBN());
                 b.setAuthor(book.getAuthor());
                 b.setPublished(book.getPublished());
+                b.setRating(book.getRating());
+                b.setImageUrl(book.getImageUrl());
                 return Optional.of(book);
             }
         }
         return Optional.empty();
+    }
+
+    @Override
+    public Boolean batchCreateBooks(List<Book> batchBooks) {
+        try {
+            for(int i = 0; i < batchBooks.size(); i++) {
+                books.add(batchBooks.get(i));
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

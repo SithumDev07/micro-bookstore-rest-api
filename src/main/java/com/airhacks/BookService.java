@@ -13,4 +13,6 @@ public interface BookService {
     Boolean removeBook(final int id);
 
     Optional<Book> updateBook(final int id, final Book book);
+
+    Boolean batchCreateBooks(final List<Book> books);
 }

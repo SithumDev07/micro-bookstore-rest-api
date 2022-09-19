@@ -6,6 +6,8 @@ public class Book {
     private int ISBN;
     private String author;
     private String published;
+    private int rating;
+    private String imageUrl;
 
     public Book() {}
 
@@ -49,12 +51,30 @@ public class Book {
         this.published = published;
     }
 
-    public Book(int id, String name, int ISBN, String author, String published) {
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Book(int id, String name, int ISBN, String author, String published, int rating, String imageUrl) {
         this.id = id;
         this.name = name;
         this.ISBN = ISBN;
         this.author = author;
         this.published = published;
+        this.rating = rating;
+        this.imageUrl = imageUrl;
     }
 
     @Override
@@ -64,7 +84,9 @@ public class Book {
                 ", name='" + name + '\'' +
                 ", ISBN=" + ISBN +
                 ", author='" + author + '\'' +
-                ", published=" + published +
+                ", published='" + published + '\'' +
+                ", rating=" + rating +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }

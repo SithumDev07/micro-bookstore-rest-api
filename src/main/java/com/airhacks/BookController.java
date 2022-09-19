@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("book")
 public class BookController {
@@ -22,9 +23,8 @@ public class BookController {
     }
 
     @GET
-    @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response allBooks(@PathParam("id") Integer id) {
+    public Response allBooks(@QueryParam("id") Integer id) {
         if(bookService.getBookById(id).isPresent()) {
             return Response
                     .ok(new Gson().toJson(bookService.getBookById(id).get()), MediaType.APPLICATION_JSON)
@@ -45,8 +45,7 @@ public class BookController {
     }
 
     @DELETE
-    @Path("{id}")
-    public Response removeBook(@PathParam("id") Integer id) {
+    public Response removeBook(@QueryParam("id") Integer id) {
         if(bookService.removeBook(id)) {
             return Response
                     .status(Response.Status.ACCEPTED)
@@ -58,8 +57,7 @@ public class BookController {
     }
 
     @PUT
-    @Path("{id}")
-    public Response updateBook(@PathParam("id") Integer id ,Book book) {
+    public Response updateBook(@QueryParam("id") Integer id ,Book book) {
         if(bookService.updateBook(id, book).isPresent()) {
             bookService.updateBook(id, book);
             return Response
@@ -69,5 +67,14 @@ public class BookController {
         return Response
                 .status(Response.Status.BAD_REQUEST)
                 .build();
+    }
+
+    @POST
+    @Path("batch")
+    public Response batchCreateBooks(List<Book> books) {
+        Boolean isSaved = bookService.batchCreateBooks(books);
+        if(isSaved) {
+            return Response.accepted().build();
+        } return Response.status(Response.Status.BAD_REQUEST).build();
     }
 }
